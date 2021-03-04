@@ -1,0 +1,39 @@
+<?php
+
+use Latte\Runtime as LR;
+
+/** source: /var/www/html/app/Presenters/templates/Homepage/soc-site.latte */
+final class Templatee9c859ab75 extends Latte\Runtime\Template
+{
+
+	public function main(): array
+	{
+		extract($this->params);
+		echo '<a href="https://blog.josefjebavy.cz" target="_blank"><img src="https://blog.josefjebavy.cz/img/logo.png" width="64" height="64" alt=""></a>
+<a href="https://twitter.com/JosefJebavy" target="_blank"><img src="https://blog.josefjebavy.cz/img/Twitter-logo-65.png" width="65" height="65" alt=""></a>
+<a href="https://www.linkedin.com/in/josef-jebavy" target="_blank"><img src="https://blog.josefjebavy.cz/img/LinkedIn-Logo-65.png" width="65" height="65" alt=""></a>
+<a href="https://www.facebook.com/JosefJebavyIT" target="_blank"><img src="https://blog.josefjebavy.cz/img/Facebook_logo-x-65.png" width="65" height="65" alt=""></a>
+<a href="https://www.youtube.com/c/josefjebavy" target="_blank"><img src="https://blog.josefjebavy.cz/img/youtube_logo-x-65.png" width="65" height="65" alt=""></a>
+<a href="https://www.instagram.com/josefjebavy/" target="_blank"><img src="https://blog.josefjebavy.cz/img/Instagram_icon.png" width="65" height="65" alt=""></a>
+<br>
+<a href="https://github.com/josefjebavy" target="_blank"><img src="https://blog.josefjebavy.cz/img/Octocat.png" width="80" height="60" alt=""></a>
+
+<br>
+
+
+<a href="https://www.abclinuxu.cz/lide/multi" target="_blank"><img src="https://blog.josefjebavy.cz/img/abclinuxu_banner-150x60.gif" width="150" height="60" alt=""></a>
+<br>
+<a href="https://www.root.cz/autori/josef-jebavy/" target="_blank"><img src="https://blog.josefjebavy.cz/img/root.cz.png" width="262" height="45" alt=""></a>
+<br>';
+		return get_defined_vars();
+	}
+
+
+	public function prepare(): void
+	{
+		extract($this->params);
+		Nette\Bridges\ApplicationLatte\UIRuntime::initialize($this, $this->parentName, $this->blocks);
+		
+	}
+
+}

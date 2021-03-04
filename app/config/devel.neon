@@ -1,0 +1,8 @@
+parameters:
+
+
+database:
+	dsn: 'mysql:host=database;dbname=nabidkasluzeb'
+	user: root
+	password: pass
+

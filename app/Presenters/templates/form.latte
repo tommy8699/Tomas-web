@@ -1,0 +1,47 @@
+{form commentForm}
+
+<ul class="errors" n:if="$form->hasErrors()">
+    <li n:foreach="$form->errors as $error">{$error}</li>
+</ul>
+
+<div class="form">
+    <span class="circle one"> </span>
+    <span class="circle two"> </span>
+
+    <h2 class="title">{_form.head}</h2>
+
+    <div class="input-container">
+       {input name class=>"input"}
+        <span>{_form.jmeno}</span>
+    </div>
+
+    <div class="input-container">
+      {input email class=>"input"}
+        <span>Email</span>
+    </div>
+
+    <div class="input-container">
+        {input predmet class=>"input"}
+        <span>{_form.predmet}</span>
+    </div>
+
+    <div class="input-container textarea">
+        {input zprava class=>"input"}
+        <span>{_form.zprava}</span>
+    </div>
+
+    <div>
+        <p>{label mesic class=>"otazka"}</p>
+
+    </div>
+
+    <div class="input-container">
+        <p>{input mesic class=>"input mesic"}</p>
+    </div>
+
+    <div class="input-container">
+        <p>{input send class=>"btn"}</p>
+    </div>
+
+</div>
+{/form}

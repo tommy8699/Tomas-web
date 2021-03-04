@@ -1,0 +1,66 @@
+version: '3.6'
+
+services:
+
+  web:
+    image: josefjebavy/debian-apache-php8.0-nette
+    container_name: josefjebavy-nabidkasluzeb_web
+    environment:
+     - NETTE_DEBUG=1
+    working_dir: /var/www/html
+
+    volumes:
+      - .:/var/www/html
+      - ./docker/development/web/msmtprc:/etc/msmtprc
+    ports:
+      - 8081:80
+      - 8082:443
+
+    networks:
+      - josefjebavy-nabidkasluzeb-network        
+  database:
+    image: mariadb:10.3.18
+    container_name: josefjebavy-nabidkasluzeb_database
+
+    environment:
+      - MYSQL_ROOT_PASSWORD=pass
+      - MYSQL_DATABASE=nabidkasluzeb
+      - MYSQL_INITDB_SKIP_TZINFO=1 # toto vyresi prni pomaly start
+      - TZ=Europe/Prague
+
+    volumes:
+      - ./docker/development/database:/docker-entrypoint-initdb.d/
+
+    networks:
+      - josefjebavy-nabidkasluzeb-network
+    ports:
+      - 3307:3306
+
+
+  phpmyadmin:
+    depends_on:
+      - database
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - '3380:80'
+    environment:
+      PMA_HOST: database
+      MYSQL_ROOT_PASSWORD: pass
+    networks:
+      - josefjebavy-nabidkasluzeb-network
+
+  composer:
+     image: josefjebavy/debian-apache-php8.0-nette
+     environment:
+       - NETTE_DEBUG=1
+     working_dir: /var/www/html
+
+     volumes:
+      - .:/var/www/html
+     command: composer install 
+   
+networks:
+  josefjebavy-nabidkasluzeb-network:
+    driver: bridge
+
+
