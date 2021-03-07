@@ -12,9 +12,10 @@
 <script type="text/javascript" src="/js/functions.js"></script>
 <link rel="stylesheet" href="/css/thickbox.css" type="text/css" media="screen" >
       <!-- Tu si vkladam meta tagy -->
-     <meta property="og:locality" content="Trebisov" />
-     <meta property="og:postal-code" content="07501" />
-     <meta property="og:country-name" content="Slovenska republika" />
+      {include block meta}
+     <meta property="og:locality" content="Jilemnice" />
+     <meta property="og:postal-code" content="5140 01" />
+     <meta property="og:country-name" content="Česká republika" />
 <style>
     .input-container span{
         display: none;
@@ -24,6 +25,14 @@
         color: #B3EFFF;
         font-size: 1rem;
     }
+    .required label{
+        color: white;
+    }
+    placeholder {
+
+        color: #fff;
+    }
+
 </style>
   </head>
   <body>
@@ -36,8 +45,8 @@
                 <span>IT specialista</span>
           </div>
          <div id="lang">
-         <a n:href="default locale=>cs"><img src="{$basePath}/img/flag-cz.png" ></a>
-         <a n:href="default locale=>en"><img src="{$basePath}/img/flag-eng.png" ></a>
+         <a n:href="Homepage:default locale=>cs"><img src="{$basePath}/img/flag-cz.png" ></a>
+         <a n:href="Homepage:default locale=>en"><img src="{$basePath}/img/flag-eng.png" ></a>
      </div>
 
         <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
@@ -58,6 +67,9 @@
 	    <script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
 
 	    <script type="text/javascript" src="//default.xeres.cz/js/awstats_misc_tracker.js"></script>
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+                  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+                  crossorigin="anonymous"></script>
         <script src="/js/form.js"></script>
       {/block}
     <noscript><img src="//default.xeres.cz/js/awstats_misc_tracker.js?nojs=y" height=0 width=0 border=0 style="display: none"></noscript>
@@ -67,8 +79,19 @@
 
       <script type="text/javascript">
 
+          $(".input").each(
+              function(){
+                  $(this).data('holder',$(this).attr('placeholder'));
+                  $(this).focusin(function(){
+                      $(this).attr('placeholder','');
+                  });
+                  $(this).focusout(function(){
+                      $(this).attr('placeholder',$(this).data('holder'));
+                  });
 
-  var _paq = _paq || [];
+              });
+
+              var _paq = _paq || [];
   // tracker methods like "setCustomDimension" should be called before "trackPageView"
   _paq.push(["setDomains", ["*.nabidka-sluzeb.xeres.cz","*.www.xeres.cz"]]);
   _paq.push(['trackPageView']);

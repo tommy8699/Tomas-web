@@ -1,0 +1,35 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+{block content}
+
+<div class="text about">
+
+    <h1>{_skoleniParalelniProgramovani.head}</h1>
+    <p>{_skoleniParalelniProgramovani.text}
+
+    </p>
+
+    <p>
+        <strong>{_skoleniParalelniProgramovani.text1}</strong>
+    </p>
+
+    <p> <img src="/img/java-logo.jpg" width="300" height="184" alt="programovaci jazyk java"></p>
+
+    <h2>{_skoleniParalelniProgramovani.head1}</h2>
+    <p>{_skoleniParalelniProgramovani.text2}</p>
+
+    <p>
+        <a href="mailto:&#101;&#109;&#97;&#105;&#108;&#64;&#106;&#111;&#115;&#101;&#102;&#106;&#101;&#98;&#97;&#118;&#121;&#46;&#99;&#122;?subject=Zajímá mě školení Paralelní programování v jazyce Java">{_skoleniParalelniProgramovani.text3}</a>
+    </p>
+
+</div>

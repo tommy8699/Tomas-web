@@ -1,4 +1,14 @@
+{block meta}
 
+{block description} <meta name="description" content="{$articles[1]->description}"> {/block}
+{block keywords} <meta name="keywords" content="{$articles[1]->keywords}">  {/block}
+{block title} <title> {$articles[1]->title} </title> {/block}
+{block url}  <meta property="og:url" content="{$articles[1]->urlseo} " /> {/block}
+{block type}<meta property="og:type" content="website" /> {/block}
+{block titleshort} <meta property="og:titleshort" content="{$articles[1]->titleshort} " /> {/block}
+{block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[1]->ogimage}" /> {/block}
+
+{/block}
 
 {block content}
 
@@ -36,15 +46,13 @@
 	<div class="menu">
   <h2>{_text-about.menu}</h2>
 
-   <!-- <a n:href="VyvojSoftware:"> <div class="menu-list">{_text-about.menu1}</div></a> -->
+   <a href="{link Article:default, locale => $articles[17]-> locale , urlseo => $articles[17]-> urlseo }"> <div class="menu-list">{_text-about.menu1}</div></a>
 
-   <a n:href="Article:default $article['locale'] $article['urlseo']"><div class="menu-list">{_text-about.menu1}</div></a>
+  <a href="{link Article:default, locale => $articles[13]-> locale, urlseo => $articles[13]-> urlseo }"><div class="menu-list">{_text-about.menu2}</div></a>
 
-  <a n:href="SoftwareReseni:"><div class="menu-list">{_text-about.menu2}</div></a>
+ <a href="{link Article:default, locale => $articles[2]-> locale , urlseo => $articles[2]-> urlseo }"> <div class="menu-list">{_text-about.menu3}</div></a>
 
-  <a n:href="PoradenstviAnalyza:"><div class="menu-list">{_text-about.menu3}</div></a>
-
-  <a n:href="Skoleni:"><div class="menu-list">{_text-about.menu4}</div></a>
+  <a href="{link Article:default, locale => $articles[6]-> locale , urlseo => $articles[6]-> urlseo }"><div class="menu-list">{_text-about.menu4}</div></a>
 
 	</div>
 
@@ -86,7 +94,7 @@
 
 <p>
 <!-- tento link je nefunkcny treba dorobit, nezabudnut !!! -->
- <a n:href=":JakZahajitSpolupraci" >{_home-text.text12} </a>
+ <a href="{link Article:default, locale => $articles[1]-> locale , urlseo => $articles[1]-> urlseo }"> {_home-text.text12} </a>
 
 </p>
 
@@ -250,7 +258,7 @@
 	<div class="text">
 
   <a name="publications"></a>
- <h2>Odborné publikace</h2>
+ <h2> {_home-technologie.head2}</h2>
 <ul>
 
     <li><a href="https://www.root.cz/serialy/souborovy-system-btrfs/" target="_blank">{_home-technologie.text14}</a> (Root.cz 2020)</li>

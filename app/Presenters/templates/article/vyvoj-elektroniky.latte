@@ -1,0 +1,40 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+{block content}
+
+<div class="text">
+    <h1>Vývoj projektů kombinujících software a elektroniku</h1>
+    <p>
+        Oproti čistě    <a href="{link Article:default, locale => $articles[18]-> locale , urlseo => $articles[18]-> urlseo }">softwarovému projektu</a> se navíc jedná o:
+    <ul>
+        <li>Výběr vhodné elektroniky</li>
+        <li>Vývoj zařízení</li>
+        <li>Testování zařízení</li>
+        <li>Úpravy zařízení</li>
+        <li>Stavba prototypu</li>
+    </ul>
+
+    Mohu nabídnout především vývoj projektů pro telemetrii, průmyslové řízení nebo automatizaci budov,
+    kde se používají pomalé a energeticky úsporné  bezdrátové sítě:
+
+    <a href="http://wireless.xeres.cz/">Bezdrátový sběr dat z bateriově napájených čidel</a>.
+    <br>
+    <a href="http://wrttm.xeres.cz/cs/" name="Detekce stoupavého proudění  pomocí bezdrátových teplotních čidel"
+       title="Detekce stoupavého proudění  pomocí bezdrátových teplotních čidel">
+        Detekce stoupavého proudění  pomocí bezdrátových teplotních čidel</a>
+    <br>
+    <a href="http://wirelessbee.xeres.cz/en/" name="Měření teploty v úlech" title="Měření teploty v úlech">Měření teploty v úlech</a>.
+    <br>
+    Obvykle se jedná o zařízení s <a href="http://multi.xeres.cz/programovani/wireless-arduino-low-power-consumption">mikroprocesory</a>.
+    </p>
+</div>

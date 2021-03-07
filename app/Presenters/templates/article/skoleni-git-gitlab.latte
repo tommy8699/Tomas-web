@@ -1,0 +1,122 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+
+{block content}
+
+<div class="text">
+    <h1>Školení GIT, GitLab</h1>
+    <p>
+        Všechna školení provádím i online.
+    </p>
+</div>
+<div class="text about">
+
+    <p>Video <a href="https://youtu.be/XFlYRXU5D0s">co je to verzování a výhody plynoucí z verzování softwaru</a>. </p>
+    <a name="git"></a>
+    <h2>Workshop GIT</h2>
+
+    <p>
+        Také pojmenováváte soubory s udáním čísla nebo datumu např: <b>soubor-2018-10-22.tar </b>?
+        Bojíte se dělat úpravy a těžko se vám hledá a porovnává jaké změny byly udělány v minulosti?
+        <br>
+        Se softwarem <b>GIT</b> už se nebudete muset bát udělat jakoukoli úpravu.
+        <a href="https://cs.wikipedia.org/wiki/Git"   target="_blank">GIT</a> je standard pro verzování mezi vývojáři softwaru, kdy slouží pro verzování zdrojových kódů aplikace.
+        V klidu a rychle se budete moci kouknout na minulost vrátit ze k verzi z minulosti nebo porovnat změny textových souborů.
+        Git je i výborný nástroj pro spolupráci na společném projektu,
+        kdy každý může pracovat sám, změny prohlížeč, spojovat, předávat spolupracovníkům a nasazovat na server.
+
+        <br>
+        Na workshopu se dozvíte jak pomocí verzování <b>zefektivnit</b> práci a jak k tomu používat nástroj <b>GIT</b>.
+    </p>
+
+
+
+    <p>    <img src="/img/git.png" width="360" height="150" alt="git"></p>
+
+    <h3>Kurz je pro</h3>
+    <p>Kurz je určen pro programátory všech úrovní a vedoucí projektů, kteří chtějí efektivně vyvíjet softwarové projekty.</p>
+
+    <h3>Na školení GIT se dozvíte a naučíte:</h3>
+    <p>
+        Po absolvování <a href="{link Article:default, locale => $articles[6]-> locale , urlseo => $articles[6]-> urlseo }">školení</a> s nástrojem GIT se naučíte efektivně verzovat zdrojový kód.
+    </p>
+    <p>
+
+    <h3>Osnova školení</h3>
+    <ul>
+        <li>Instalace GITu.</li>
+        <li>Konzolové a GUI rozhraní.</li>
+        <li>Založení repositáře projektu: lokálně, na serveru, bitbucket.org.</li>
+        <li>Použití: stažení dat (clone, pull), vložení úprav (commit), add <!-- partial add -->,odeslání změn (push).</li>
+        <li>Použití v týmu: větvě (brach), spojení větví (merge).</li>
+        <li>Prohlížení změn, sledování historie.</li>
+        <li>Git ignore, Revert, Tag.</li>
+        <li>Git squash, stash.</li>
+        <li>Git flow(=způsob/proces vývoje za použití gitu):  release, fix</li>
+    </ul>
+    </p>
+    <h2>Požadavky na výbavu:</h2>
+    <p>
+    <ul>
+        <li>Git</li>
+    </ul>
+    </p>
+    <p>
+        <a href="mailto:&#101;&#109;&#97;&#105;&#108;&#64;&#106;&#111;&#115;&#101;&#102;&#106;&#101;&#98;&#97;&#118;&#121;&#46;&#99;&#122;?subject=Zajímá mě workshop GIT">Zajímá mě workshop GIT</a>
+    </p>
+</div>
+
+
+<div class="text about">
+    <a name="gitlab"></a>
+    <h2>Workshop GitLab</h2>
+    <p>Chcete ještě více zefektivni vývoj, vést projekt pomocí projektového řízení? Použijte nástroj <a href="https://about.gitlab.com/"   target="_blank">GitLab</a>.</p>
+    <p>
+        Pomocí nástroje <a href="https://blog.josefjebavy.cz/unix/gitlab"   target="_blank">GitLab</a> můžete efektivně vést projekty pomocí projektového řízení a delegovat práci a sledovat stav realizace úkolů
+    </p>
+
+    <img src="/img/gitlab-logo-white.png" width="250" height="274" alt="gitlab">
+    <h3>Kurz je pro</h3>
+    <p>Kurz je určen pro programátory všech úrovní a vedoucí projektů, kteří chtějí efektivně vyvíjet softwarové projekty.</p>
+
+
+
+    <h3>Na školení se dozvíte a naučíte:</h3>
+    <p>Na <a href="{link Article:default, locale => $articles[6]-> locale , urlseo => $articles[6]-> urlseo }">školení</a> se seznámíte s nástrojem GitLab a naučíte se sním zpracovat a používat ho ke správě a vývoje projektů: vést úkoly, zapisovat dokumentaci, prohlížet commity atd. </p>
+
+    <h3>Osnova školení</h3>
+    <p>
+    <ul>
+        <li>Seznámení s webovým rozhraním.</li>
+        <li>Založení GIT repozitáže.</li>
+        <li>Správa uživatelů.</li>
+        <li>Vytváření a práce s úkoly.</li>
+        <li>Vedení projektů: board, milestone, použití agilní metodiky.</li>
+        <li>Měření času.</li>
+        <li>Psaní dokumentace.</li>
+    </ul>
+    </p>
+    <h3>Požadavky na znalosti:</h3>
+    <p>
+        Základní znalost verzovacího nastroje GIT.
+    </p>
+    <h2>Požadavky na výbavu:</h2>
+    <p>
+    <ul>
+        <li>Webový prohlížeč, Git</li>
+    </ul>
+    </p>
+    <p>
+        <a href="mailto:&#101;&#109;&#97;&#105;&#108;&#64;&#106;&#111;&#115;&#101;&#102;&#106;&#101;&#98;&#97;&#118;&#121;&#46;&#99;&#122;?subject=Zajímá mě workshop GitLab">Zajímá mě workshop GitLab</a>
+    </p>
+</div>
