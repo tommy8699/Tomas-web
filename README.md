@@ -1,3 +1,3 @@
-# snapbackuper-web
+Prezencny web pre znameho 
 
-webova stranka pro projekt snapbackuper - zalohovani
+Webova stranka pre projekt prezencny web 
