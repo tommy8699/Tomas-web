@@ -10,15 +10,15 @@
         </url>
     {/foreach }
 
-    {foreach $articles as $article}
+    {for $i = 2; $i < 39; $i++}
         <url>
-            <loc>{link Homepage:default $article['urlseo'] ,$article['locale']}</loc>
+            <loc>{link Article:default urlseo => $articles[$i]-> urlseo, locale => $articles[$i]-> locale}</loc>
 
             <changefreq>weekly</changefreq>
 
             <priority>0.8</priority>
 
         </url>
-    {/foreach }
+    {/for}
 
 </urlset>

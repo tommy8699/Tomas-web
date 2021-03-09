@@ -62,7 +62,6 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->template->langs=$this->langs;
         $this->getHttpResponse()->setContentType('application/xml');
 
-    bdump($articles);
     }
     protected function createComponentCommentForm(): Form
     {

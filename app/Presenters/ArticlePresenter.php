@@ -26,16 +26,17 @@ final class ArticlePresenter extends Nette\Application\UI\Presenter
     {
         $articles = $this->database->table('articles')->where(['locale'=> $locale])->where(['urlseo'=> $urlseo])->fetchAll();
         $this->template->articles = $articles;
-
+        $articl = $this->database->table('articles')->where(['locale'=> $locale])->fetchAll();
+        $this->template->articl = $articl;
         if (!$urlseo) {
             $this->error('Stránka nebyla nalezena');
         }
-        bdump($articles);
+        bdump($articl);
         //$this->template->article = $this->article->findOneBy(['locale' => $locale, 'urlseo' => $urlseo]);
-// místo DB 🔼 prostě sestavím cestu k souboru a nastavím jako view 🔽
+// míesto DB 🔼 proste zostavím cestu k souboru a nastavím ako view 🔽
         $template = $this->getTemplate();
 //        if (Strings::contains('..', $locale) || Strings::contains('..', $urlseo)) {
-  //          $this->error(); // ošetření nežádoucích vstupů -> e404
+  //          $this->error(); // ošetřenie nežiadoucích vstupov -> e404
     //    }
 
         $filePath = __DIR__ . '/templates/'.'article/' . $urlseo . '.latte';
@@ -58,7 +59,7 @@ final class ArticlePresenter extends Nette\Application\UI\Presenter
         $this->template->langs=$this->langs;
         $this->getHttpResponse()->setContentType('application/xml');
 
-        bdump($articles);
+        //bdump($articles);
     }
 
 
