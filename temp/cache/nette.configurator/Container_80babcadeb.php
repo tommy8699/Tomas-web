@@ -82,156 +82,32 @@ class Container_80babcadeb extends Nette\DI\Container
 		'Contributte\Translation\Tracy\Panel' => [['translation.tracyPanel']],
 		'Nette\Routing\RouteList' => [['router']],
 		'Nette\Routing\Router' => [['router']],
-		'ArrayAccess' => [
-			2 => [
-				'router',
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
+		'ArrayAccess' => [2 => ['router', 'application.1', 'application.2', 'application.4']],
 		'Countable' => [2 => ['router']],
 		'IteratorAggregate' => [2 => ['router']],
 		'Traversable' => [2 => ['router']],
 		'Nette\Application\Routers\RouteList' => [['router']],
-		'Nette\Application\UI\Presenter' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\Application\UI\Control' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\Application\UI\Component' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\ComponentModel\Container' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\ComponentModel\Component' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
+		'App\Forms\commentFormFactory' => [['01']],
+		'App\Forms\formSucceeded' => [['02']],
+		'Nette\Application\UI\Presenter' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\Application\UI\Control' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\Application\UI\Component' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\ComponentModel\Container' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\ComponentModel\Component' => [2 => ['application.1', 'application.2', 'application.4']],
 		'Nette\Application\IPresenter' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.3',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-				'application.9',
-				'application.10',
-			],
+			2 => ['application.1', 'application.2', 'application.3', 'application.4', 'application.5', 'application.6'],
 		],
-		'Nette\Application\UI\Renderable' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\Application\UI\StatePersistent' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\Application\UI\SignalReceiver' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\ComponentModel\IContainer' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
-		'Nette\ComponentModel\IComponent' => [
-			2 => [
-				'application.1',
-				'application.2',
-				'application.4',
-				'application.5',
-				'application.6',
-				'application.7',
-				'application.8',
-			],
-		],
+		'Nette\Application\UI\Renderable' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\Application\UI\StatePersistent' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\Application\UI\SignalReceiver' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\ComponentModel\IContainer' => [2 => ['application.1', 'application.2', 'application.4']],
+		'Nette\ComponentModel\IComponent' => [2 => ['application.1', 'application.2', 'application.4']],
 		'App\Presenters\ArticlePresenter' => [2 => ['application.1']],
 		'App\Presenters\Error4xxPresenter' => [2 => ['application.2']],
 		'App\Presenters\ErrorPresenter' => [2 => ['application.3']],
 		'App\Presenters\HomepagePresenter' => [2 => ['application.4']],
-		'App\Presenters\PoradenstviAnalyzaPresenter' => [2 => ['application.5']],
-		'App\Presenters\SkoleniPresenter' => [2 => ['application.6']],
-		'App\Presenters\SoftwareReseniPresenter' => [2 => ['application.7']],
-		'App\Presenters\VyvojSoftwarePresenter' => [2 => ['application.8']],
-		'NetteModule\ErrorPresenter' => [2 => ['application.9']],
-		'NetteModule\MicroPresenter' => [2 => ['application.10']],
+		'NetteModule\ErrorPresenter' => [2 => ['application.5']],
+		'NetteModule\MicroPresenter' => [2 => ['application.6']],
 		'Nette\Forms\FormFactory' => [['forms.factory']],
 		'Contributte\Translation\Latte\Filters' => [['translation.latte.filters']],
 	];
@@ -244,9 +120,21 @@ class Container_80babcadeb extends Nette\DI\Container
 	}
 
 
+	public function createService01(): App\Forms\commentFormFactory
+	{
+		return new App\Forms\commentFormFactory($this->getService('translation.translator'));
+	}
+
+
+	public function createService02(): App\Forms\formSucceeded
+	{
+		return new App\Forms\formSucceeded($this->getService('translation.translator'));
+	}
+
+
 	public function createServiceApplication__1(): App\Presenters\ArticlePresenter
 	{
-		$service = new App\Presenters\ArticlePresenter;
+		$service = new App\Presenters\ArticlePresenter($this->getService('01'));
 		$service->injectPrimary(
 			$this,
 			$this->getService('application.presenterFactory'),
@@ -257,15 +145,10 @@ class Container_80babcadeb extends Nette\DI\Container
 			$this->getService('security.user'),
 			$this->getService('latte.templateFactory')
 		);
-		$service->article = $this->getService('database.default.context');
+		$service->translator = $this->getService('translation.translator');
+		$service->database = $this->getService('database.default.context');
 		$service->invalidLinkMode = 5;
 		return $service;
-	}
-
-
-	public function createServiceApplication__10(): NetteModule\MicroPresenter
-	{
-		return new NetteModule\MicroPresenter($this, $this->getService('http.request'), $this->getService('router'));
 	}
 
 
@@ -295,7 +178,7 @@ class Container_80babcadeb extends Nette\DI\Container
 
 	public function createServiceApplication__4(): App\Presenters\HomepagePresenter
 	{
-		$service = new App\Presenters\HomepagePresenter;
+		$service = new App\Presenters\HomepagePresenter($this->getService('01'));
 		$service->injectPrimary(
 			$this,
 			$this->getService('application.presenterFactory'),
@@ -307,95 +190,21 @@ class Container_80babcadeb extends Nette\DI\Container
 			$this->getService('latte.templateFactory')
 		);
 		$service->translator = $this->getService('translation.translator');
-		$service->article = $this->getService('database.default.context');
+		$service->database = $this->getService('database.default.context');
 		$service->invalidLinkMode = 5;
 		return $service;
 	}
 
 
-	public function createServiceApplication__5(): App\Presenters\PoradenstviAnalyzaPresenter
-	{
-		$service = new App\Presenters\PoradenstviAnalyzaPresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->translator = $this->getService('translation.translator');
-		$service->db = $this->getService('database.default.context');
-		$service->invalidLinkMode = 5;
-		return $service;
-	}
-
-
-	public function createServiceApplication__6(): App\Presenters\SkoleniPresenter
-	{
-		$service = new App\Presenters\SkoleniPresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->translator = $this->getService('translation.translator');
-		$service->db = $this->getService('database.default.context');
-		$service->invalidLinkMode = 5;
-		return $service;
-	}
-
-
-	public function createServiceApplication__7(): App\Presenters\SoftwareReseniPresenter
-	{
-		$service = new App\Presenters\SoftwareReseniPresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->translator = $this->getService('translation.translator');
-		$service->db = $this->getService('database.default.context');
-		$service->invalidLinkMode = 5;
-		return $service;
-	}
-
-
-	public function createServiceApplication__8(): App\Presenters\VyvojSoftwarePresenter
-	{
-		$service = new App\Presenters\VyvojSoftwarePresenter;
-		$service->injectPrimary(
-			$this,
-			$this->getService('application.presenterFactory'),
-			$this->getService('router'),
-			$this->getService('http.request'),
-			$this->getService('http.response'),
-			$this->getService('session.session'),
-			$this->getService('security.user'),
-			$this->getService('latte.templateFactory')
-		);
-		$service->translator = $this->getService('translation.translator');
-		$service->db = $this->getService('database.default.context');
-		$service->invalidLinkMode = 5;
-		return $service;
-	}
-
-
-	public function createServiceApplication__9(): NetteModule\ErrorPresenter
+	public function createServiceApplication__5(): NetteModule\ErrorPresenter
 	{
 		return new NetteModule\ErrorPresenter($this->getService('tracy.logger'));
+	}
+
+
+	public function createServiceApplication__6(): NetteModule\MicroPresenter
+	{
+		return new NetteModule\MicroPresenter($this, $this->getService('http.request'), $this->getService('router'));
 	}
 
 
@@ -747,8 +556,62 @@ class Container_80babcadeb extends Nette\DI\Container
 		$service->addResource('neon', '/var/www/html/app/lang/referencie/referencie.en_US.neon', 'en_US', 'referencie');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleni/skoleni.cs_CZ.neon', 'cs_CZ', 'skoleni');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleni/skoleni.en_US.neon', 'en_US', 'skoleni');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniBtrfs/skoleniBtrfs.cs_CZ.neon', 'cs_CZ', 'skoleniBtrfs');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniBtrfs/skoleniBtrfs.en_US.neon', 'en_US', 'skoleniBtrfs');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleniDocker/skoleniDocker.cs_CZ.neon', 'cs_CZ', 'skoleniDocker');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleniDocker/skoleniDocker.en_US.neon', 'en_US', 'skoleniDocker');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniGit/skoleniGit.cs_CZ.neon', 'cs_CZ', 'skoleniGit');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniGit/skoleniGit.en_US.neon', 'en_US', 'skoleniGit');
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniIspConfig/skoleniIspConfig.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniIspConfig'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniIspConfig/skoleniIspConfig.en_US.neon',
+			'en_US',
+			'skoleniIspConfig'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniKarieraHrNabor/skoleniKarieraHrNabor.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniKarieraHrNabor'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniKarieraHrNabor/skoleniKarieraHrNabor.en_US.neon',
+			'en_US',
+			'skoleniKarieraHrNabor'
+		);
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniLinux/skoleniLinux.cs_CZ.neon', 'cs_CZ', 'skoleniLinux');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniLinux/skoleniLinux.en_US.neon', 'en_US', 'skoleniLinux');
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniParalelniProgramovani/skoleniParalelniProgramovani.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniParalelniProgramovani'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniParalelniProgramovani/skoleniParalelniProgramovani.en_US.neon',
+			'en_US',
+			'skoleniParalelniProgramovani'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniProxmox/skoleniProxmox.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniProxmox'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniProxmox/skoleniProxmox.en_US.neon',
+			'en_US',
+			'skoleniProxmox'
+		);
 		$service->addResource(
 			'neon',
 			'/var/www/html/app/lang/software-reseni/software-reseni.cs_CZ.neon',
@@ -844,8 +707,62 @@ class Container_80babcadeb extends Nette\DI\Container
 		$service->addResource('neon', '/var/www/html/app/lang/referencie/referencie.en_US.neon', 'en_US', 'referencie');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleni/skoleni.cs_CZ.neon', 'cs_CZ', 'skoleni');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleni/skoleni.en_US.neon', 'en_US', 'skoleni');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniBtrfs/skoleniBtrfs.cs_CZ.neon', 'cs_CZ', 'skoleniBtrfs');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniBtrfs/skoleniBtrfs.en_US.neon', 'en_US', 'skoleniBtrfs');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleniDocker/skoleniDocker.cs_CZ.neon', 'cs_CZ', 'skoleniDocker');
 		$service->addResource('neon', '/var/www/html/app/lang/skoleniDocker/skoleniDocker.en_US.neon', 'en_US', 'skoleniDocker');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniGit/skoleniGit.cs_CZ.neon', 'cs_CZ', 'skoleniGit');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniGit/skoleniGit.en_US.neon', 'en_US', 'skoleniGit');
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniIspConfig/skoleniIspConfig.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniIspConfig'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniIspConfig/skoleniIspConfig.en_US.neon',
+			'en_US',
+			'skoleniIspConfig'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniKarieraHrNabor/skoleniKarieraHrNabor.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniKarieraHrNabor'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniKarieraHrNabor/skoleniKarieraHrNabor.en_US.neon',
+			'en_US',
+			'skoleniKarieraHrNabor'
+		);
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniLinux/skoleniLinux.cs_CZ.neon', 'cs_CZ', 'skoleniLinux');
+		$service->addResource('neon', '/var/www/html/app/lang/skoleniLinux/skoleniLinux.en_US.neon', 'en_US', 'skoleniLinux');
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniParalelniProgramovani/skoleniParalelniProgramovani.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniParalelniProgramovani'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniParalelniProgramovani/skoleniParalelniProgramovani.en_US.neon',
+			'en_US',
+			'skoleniParalelniProgramovani'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniProxmox/skoleniProxmox.cs_CZ.neon',
+			'cs_CZ',
+			'skoleniProxmox'
+		);
+		$service->addResource(
+			'neon',
+			'/var/www/html/app/lang/skoleniProxmox/skoleniProxmox.en_US.neon',
+			'en_US',
+			'skoleniProxmox'
+		);
 		$service->addResource(
 			'neon',
 			'/var/www/html/app/lang/software-reseni/software-reseni.cs_CZ.neon',

@@ -4,6 +4,8 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" >
     <link href="/css/body.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
       <meta name="author" content="Bc. Josef Jebavý" >
       <meta name="generator" content="Bluefish 2.2.10" >
   <meta name="google-site-verification" content="MbeXvsACTdKE7lC10_buc1k0RvfxpVWgl2EoDn--dPo" >
@@ -17,6 +19,7 @@
      <meta property="og:postal-code" content="5140 01" />
      <meta property="og:country-name" content="Česká republika" />
 <style>
+
     .input-container span{
         display: none;
     }
@@ -49,7 +52,13 @@
          <a n:href="Homepage:default locale=>en"><img src="{$basePath}/img/flag-eng.png" ></a>
      </div>
 
-        <div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+         <div n:foreach="$flashes as $flash" n:class="alert">
+             <span class="far fa-envelope"></span>
+               <span class="msg"> {$flash->message} </span>
+             <span class="close-btn">
+                 <span class="fas fa-times"></span>
+             </span>
+         </div>
      </div>
      </a>
 
@@ -78,6 +87,7 @@
 <!-- Piwik -->
 
       <script type="text/javascript">
+
 
           $(".input").each(
               function(){

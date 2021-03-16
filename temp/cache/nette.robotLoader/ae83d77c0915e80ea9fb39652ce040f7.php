@@ -5,12 +5,22 @@ return array (
     'App\\Bootstrap' => 
     array (
       'file' => '/var/www/html/app/Bootstrap.php',
-      'time' => 1613898845,
+      'time' => 1615713903,
+    ),
+    'App\\Forms\\commentFormFactory' => 
+    array (
+      'file' => '/var/www/html/app/Forms/commentFormFactory.php',
+      'time' => 1615721051,
+    ),
+    'App\\Forms\\formSucceeded' => 
+    array (
+      'file' => '/var/www/html/app/Forms/formSucceeded.php',
+      'time' => 1615715358,
     ),
     'App\\Presenters\\ArticlePresenter' => 
     array (
       'file' => '/var/www/html/app/Presenters/ArticlePresenter.php',
-      'time' => 1614632495,
+      'time' => 1615719531,
     ),
     'App\\Presenters\\Error4xxPresenter' => 
     array (
@@ -25,36 +35,19 @@ return array (
     'App\\Presenters\\HomepagePresenter' => 
     array (
       'file' => '/var/www/html/app/Presenters/HomepagePresenter.php',
-      'time' => 1614634184,
-    ),
-    'App\\Presenters\\PoradenstviAnalyzaPresenter' => 
-    array (
-      'file' => '/var/www/html/app/Presenters/PoradenstviAnalyzaPresenter.php',
-      'time' => 1614534199,
-    ),
-    'App\\Presenters\\SkoleniPresenter' => 
-    array (
-      'file' => '/var/www/html/app/Presenters/SkoleniPresenter.php',
-      'time' => 1614534199,
-    ),
-    'App\\Presenters\\SoftwareReseniPresenter' => 
-    array (
-      'file' => '/var/www/html/app/Presenters/SoftwareReseniPresenter.php',
-      'time' => 1614534422,
-    ),
-    'App\\Presenters\\VyvojSoftwarePresenter' => 
-    array (
-      'file' => '/var/www/html/app/Presenters/VyvojSoftwarePresenter.php',
-      'time' => 1614534199,
+      'time' => 1615721051,
     ),
     'App\\Router\\RouterFactory' => 
     array (
       'file' => '/var/www/html/app/Router/RouterFactory.php',
-      'time' => 1614631707,
+      'time' => 1615880546,
     ),
   ),
   1 => 
   array (
-    'Nette\\Localization\\Nette\\Localization\\ITranslator' => 2,
+    'Nette\\Application\\UI\\IStatePersistent' => 7,
+    'Nette\\Application\\UI\\ITemplate' => 4,
+    'Nette\\Application\\UI\\ITemplateFactory' => 1,
+    'Nette\\Localization\\Nette\\Localization\\ITranslator' => 3,
   ),
 );

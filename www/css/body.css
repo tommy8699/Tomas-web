@@ -138,13 +138,16 @@ label{
     margin-bottom: 15px;
     margin-left: 7%;
 }
+
 textarea.input{
     padding: 0.8rem 1.2rem;
     min-height: 150px;
     border-radius: 22px;
     resize: none;
     overflow-y: auto;
+    color: white;
 }
+
 .input-container label{
     position: absolute;
     text-outline: 50%;
@@ -158,6 +161,7 @@ textarea.input{
     z-index: 1000;
     transition: 0.5s;
 }
+
 .input-container.textarea label{
     top: 1rem;
     transform: translateY(0);
@@ -192,7 +196,7 @@ textarea.input{
     top: -3px;
     left: 76px;
     transform: translateY(-50%);
-    font-size: 1 rem;
+    font-size: 1rem;
     padding: 0 0.3rem;
     pointer-events: none;
     z-index: 500;
@@ -233,4 +237,67 @@ display: block;
 .input-container .focus span:after{
     width: 50%;
     opacity: 0;
+}
+
+.alert{
+    background: #40965b;
+    padding: 20px 40px;
+    min-width: 345px;
+    width: 20%;
+    left: 0px;
+    top:5px;
+    border-radius: 4px;
+    border-left: 16px solid #73BD4E;
+    overflow: hidden;
+}
+.alert .fa-envelope{
+    position: absolute;
+    left: 29px;
+    top: 13%;
+    transform: translateY(-50%);
+    color: #73BD4E;
+    font-size: 30px;
+}
+.alert .msg {
+    padding: 0 20px;
+    font-size: 18px;
+    color: white;
+}
+.alert .close-btn{
+    position: absolute;
+    background: #396E4A;
+    padding: 20px 28px;
+    top: 13%;
+    transform: translateY(-50%);
+    left: 373px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.close-btn:hover{
+    background: #245533;
+}
+.close-btn .fa-times{
+    color: white;
+    font-size: 22px;
+    line-height: 40px;
+}
+.hide{
+    display: none;
+}
+.hide{
+    animation: hide_slide 10s ease forwards;
+}
+@keyframes hide_slide {
+    0%{
+        transform: translateX(10px);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    80%{
+        transform: translateX(10%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }

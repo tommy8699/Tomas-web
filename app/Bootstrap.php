@@ -37,16 +37,4 @@ class Bootstrap
         return $configurator;
 	}
 
-	//Priprava pre cron
-
-    /*public static function bootForCron(): Configurator
-    {
-        //	$configurator = new Configurator;
-        //  $configurator =self::createConfigurator(in_array('--debug', $_SERVER['argv'], true));
-
-
-        # Debug mód pouze pokud existuje --debug přepínač
-        return self::boot(in_array('--debug', $_SERVER['argv'], true));
-        //return $configurator;
-    }*/
 }

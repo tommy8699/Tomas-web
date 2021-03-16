@@ -13,6 +13,7 @@ zprava-placeholder: "Napište nám Zprávu"
 mesic: "Kontrolní otázka. Nyní je jaké číslo měsíce?"
 mesic-rule1: "Měsíc musí být číslo "
 mesic-rule2: "Vložte číslo aktuálního měsíce"
+mesic-required: "Zadajte čislo mesiaca"
 submit-btn: "Odoslat"
 flashMessage: "Email byl odeslan"
 

@@ -29,5 +29,9 @@ translation:
     		- Contributte\Translation\LocalesResolvers\Router
     		- Contributte\Translation\LocalesResolvers\Parameter
     		- Contributte\Translation\LocalesResolvers\Header
+
 services:
 	router: App\Router\RouterFactory::createRouter
+	- App\Forms\commentFormFactory
+	- App\Forms\formSucceeded
+
