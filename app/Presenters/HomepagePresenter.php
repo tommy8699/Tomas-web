@@ -7,8 +7,8 @@ namespace App\Presenters;
 use Nette;
 use Contributte;
 use Nette\Application\UI\Form;
-use Nette\Mail\Message;
 use Nette\Mail\SendmailMailer;
+use App\Forms;
 use Nette\Database\Context;
 
 final class HomepagePresenter extends Nette\Application\UI\Presenter
@@ -18,8 +18,12 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     public $translator;
     public $langs = ['cs', 'en'];
 
+
+
+
     /** @var Context @inject */
-    public $article;
+    public $database;
+    
 
 
     public function renderIndex(): void
@@ -36,26 +40,24 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 
     public function renderDefault(string $locale): void
     {
+
         //TODO - nacitat jazyky z konfigurace
         $this->template->lang = $locale;
-        $article = $this->article->table('articles')->where(['locale'=> $locale])->fetchAll();
-        $this->template->article = $article;
+        $articles = $this->database->table('articles')->where(['locale'=> $locale])->fetchAll();
+        $this->template->articles = $articles;
+      //  bdump($articles);
     }
 
-    public function actionjakZahajitSpolupraci(/*string $locale, string $urlseo*/): void
-    {
-        //$this->template->lang=$locale;
-    }
 
     public function renderSitemap(): void
     {
-       // $packages = $this->database->table('packages')->fetchAll();
+        $articles = $this->database->table('articles')->fetchAll();
 
         //pouziji jako hlavni sablonu prazdnou sablonu
         $this->setLayout('empty');
         // zajisti genrovani ablolutnich URL
         $this->absoluteUrls = true;
-       // $this->template->packages = $packages;
+        $this->template->articles = $articles;
         $this->template->langs=$this->langs;
         $this->getHttpResponse()->setContentType('application/xml');
 
@@ -117,4 +119,6 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         // presmerovani je potreba
         $this->redirect('this');
     }
+
+
 }

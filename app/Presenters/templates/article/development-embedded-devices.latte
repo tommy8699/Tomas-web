@@ -1,0 +1,40 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+{block content}
+<div class="text">
+    <h1> {_vyvoj-embeded.head}</h1>
+    <p>
+        {_vyvoj-embeded.text}     <a href="{link Article:default, locale => $articl[18]-> locale , urlseo => $articl[18]-> urlseo }"> {_vyvoj-embeded.text0.1}</a> {_vyvoj-embeded.text0.2}
+    <ul>
+        <li>{_vyvoj-embeded.ul}</li>
+        <li>{_vyvoj-embeded.ul1}</li>
+        <li>{_vyvoj-embeded.ul2}</li>
+        <li>{_vyvoj-embeded.ul3}</li>
+        <li>{_vyvoj-embeded.ul4}</li>
+    </ul>
+    {_vyvoj-embeded.text1}
+    <br>
+    <a href="https://wireless.xeres.cz/">{_vyvoj-embeded.text2}</a>.
+    <br>
+    <a href="https://wrttm.xeres.cz/cs/" name="Detekce stoupavého proudění  pomocí bezdrátových teplotních čidel"
+       title="Detekce stoupavého proudění  pomocí bezdrátových teplotních čidel" target="_blank">
+        {_vyvoj-embeded.text3}</a>
+    <br>
+    <a href="https://wirelessbee.xeres.cz/en/" name="Měření teploty v úlech" title="Měření teploty v úlech" target="_blank">{_vyvoj-embeded.text4}</a>.
+    <br>
+    {_vyvoj-embeded.text5}
+     <a href="https://multi.xeres.cz/programovani/wireless-arduino-low-power-consumption" target="_blank">{_vyvoj-embeded.text6}</a>
+    {_vyvoj-embeded.text7} <a href="https://blog.josefjebavy.cz/unix/raspberry_pi" target="_blank">Raspberry Pi</a>,
+    <a href="https://blog.josefjebavy.cz/pocitace/banana-pi-r1" target="_blank">Banana Pi</a> {_vyvoj-embeded.text8}
+    </p>
+</div>

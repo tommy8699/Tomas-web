@@ -2,24 +2,26 @@
 
 use Latte\Runtime as LR;
 
-/** source: /var/www/html/app/Presenters/templates/Homepage/skoleni.latte */
+/** source: /var/www/html/app/Presenters/templates/Homepage/default.latte */
 final class Templateecbb55184e extends Latte\Runtime\Template
 {
 	protected const BLOCKS = [
-		['content' => 'blockContent'],
+		['meta' => 'blockMeta', 'description' => 'blockDescription', 'keywords' => 'blockKeywords', 'title' => 'blockTitle', 'url' => 'blockUrl', 'type' => 'blockType', 'titleshort' => 'blockTitleshort', 'ogimage' => 'blockOgimage', 'content' => 'blockContent'],
 	];
 
 
 	public function main(): array
 	{
 		extract($this->params);
-		echo '
-
-';
 		if ($this->getParentName()) {
 			return get_defined_vars();
 		}
-		$this->renderBlock('content', get_defined_vars()) /* line 3 */;
+		$this->renderBlock('meta', get_defined_vars()) /* line 1 */;
+		echo '
+
+
+';
+		$this->renderBlock('content', get_defined_vars()) /* line 14 */;
 		return get_defined_vars();
 	}
 
@@ -32,7 +34,105 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 	}
 
 
-	/** {block content} on line 3 */
+	/** {block meta} on line 1 */
+	public function blockMeta(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo "\n";
+		$this->renderBlock('description', get_defined_vars()) /* line 3 */;
+		echo "\n";
+		$this->renderBlock('keywords', get_defined_vars()) /* line 4 */;
+		echo "\n";
+		$this->renderBlock('title', get_defined_vars()) /* line 5 */;
+		echo "\n";
+		$this->renderBlock('url', get_defined_vars()) /* line 6 */;
+		echo "\n";
+		$this->renderBlock('type', get_defined_vars()) /* line 7 */;
+		echo "\n";
+		$this->renderBlock('titleshort', get_defined_vars()) /* line 8 */;
+		echo "\n";
+		$this->renderBlock('ogimage', get_defined_vars()) /* line 9 */;
+		echo '
+
+';
+	}
+
+
+	/** {block description} on line 3 */
+	public function blockDescription(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo ' <meta name="description" content="';
+		echo LR\Filters::escapeHtmlAttr($articles[1]->description) /* line 3 */;
+		echo '"> ';
+	}
+
+
+	/** {block keywords} on line 4 */
+	public function blockKeywords(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo ' <meta name="keywords" content="';
+		echo LR\Filters::escapeHtmlAttr($articles[1]->keywords) /* line 4 */;
+		echo '">  ';
+	}
+
+
+	/** {block title} on line 5 */
+	public function blockTitle(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo ' <title> ';
+		echo LR\Filters::escapeHtmlText($articles[1]->title) /* line 5 */;
+		echo ' </title> ';
+	}
+
+
+	/** {block url} on line 6 */
+	public function blockUrl(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo '  <meta property="og:url" content="';
+		echo LR\Filters::escapeHtmlAttr($articles[1]->urlseo) /* line 6 */;
+		echo ' "> ';
+	}
+
+
+	/** {block type} on line 7 */
+	public function blockType(array $ʟ_args): void
+	{
+		echo '<meta property="og:type" content="website"> ';
+	}
+
+
+	/** {block titleshort} on line 8 */
+	public function blockTitleshort(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo ' <meta property="og:titleshort" content="';
+		echo LR\Filters::escapeHtmlAttr($articles[1]->titleshort) /* line 8 */;
+		echo ' "> ';
+	}
+
+
+	/** {block ogimage} on line 9 */
+	public function blockOgimage(array $ʟ_args): void
+	{
+		extract($this->params);
+		extract($ʟ_args);
+		echo '  <meta property="og:image" content="https://www.josefjebavy.cz/';
+		echo LR\Filters::escapeHtmlAttr($articles[1]->ogimage) /* line 9 */;
+		echo '"> ';
+	}
+
+
+	/** {block content} on line 14 */
 	public function blockContent(array $ʟ_args): void
 	{
 		extract($this->params);
@@ -60,22 +160,22 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 <br>
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text4"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text5"));
-		echo '</b>  <b> ';
+		echo ' </b>  <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text6"));
-		echo '</b> ';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text7"));
 		echo '
 
 <br>
-<b>';
+<b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text8"));
-		echo '</b> ';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text9"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text9.1"));
-		echo '</b>';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text9.2"));
 		echo '
 <br>
@@ -87,11 +187,11 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text10.1"));
 		echo '<b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text10.2"));
-		echo '</b> ';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text10.3"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text10.4"));
-		echo '</b>.
+		echo ' </b>.
 
 </p>
 </div>
@@ -102,57 +202,54 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text11"));
 		echo '
-<a href="#kontakt">';
+<a href="#kontakt"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.text12"));
-		echo '</a>.
+		echo ' </a>.
 </p>
 </div>
 
 
 	<div class="menu">
-  <h2>';
+  <h2> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu"));
-		echo '</h2>
+		echo ' </h2>
 
-    <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("VyvojSoftware:")) /* line 39 */;
-		echo '"> <div class="menu-list">';
+   <a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[17]->locale , 'urlseo' => $articles[17]->urlseo])) /* line 50 */;
+		echo '"> <div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu1"));
-		echo '</div></a>
-<!--<a n:href="VyvojSoftware: $article[\'locale\']"><div class="menu-list">';
-		echo LR\Filters::escapeHtmlComment(call_user_func($this->filters->translate, "text-about.menu1"));
-		echo '</div></a> -->
+		echo ' </div></a>
 
   <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("SoftwareReseni:")) /* line 42 */;
-		echo '"><div class="menu-list">';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[13]->locale, 'urlseo' => $articles[13]->urlseo])) /* line 52 */;
+		echo '"><div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu2"));
-		echo '</div></a>
+		echo ' </div></a>
 
-  <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("PoradenstviAnalyza:")) /* line 44 */;
-		echo '"><div class="menu-list">';
+ <a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[2]->locale , 'urlseo' => $articles[2]->urlseo])) /* line 54 */;
+		echo '"> <div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu3"));
-		echo '</div></a>
+		echo ' </div></a>
 
   <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Skoleni:")) /* line 46 */;
-		echo '"><div class="menu-list">';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[5]->locale , 'urlseo' => $articles[5]->urlseo])) /* line 56 */;
+		echo '"><div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu4"));
-		echo '</div></a>
+		echo ' </div></a>
 
 	</div>
 
 
 <div class="text">
-<h2>';
+<h2> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.head"));
-		echo '</h2>
+		echo ' </h2>
 
 <p>
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text1"));
-		echo ' <b>ČVUT</b>';
+		echo ' <b>ČVUT</b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text2"));
 		echo "\n";
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text3"));
@@ -168,11 +265,11 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 <p>
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text5"));
-		echo '<b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text5.1"));
-		echo '</b>';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text5.2"));
-		echo '<b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text5.3"));
 		echo ' </b>
 ';
@@ -189,7 +286,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text8"));
 		echo '
- <a href="https://blog.josefjebavy.cz/vzdelavani/video-konference" target="_blank">';
+ <a href="https://blog.josefjebavy.cz/vzdelavani/video-konference" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text9"));
 		echo ' </a>.
 </p>
@@ -203,9 +300,9 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 <p>
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text11"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text11.1"));
-		echo '</b> ';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text11.2"));
 		echo '
 </p>
@@ -214,9 +311,9 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 
 <p>
 <!-- tento link je nefunkcny treba dorobit, nezabudnut !!! -->
- <a  href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link(":JakZahajitSpolupraci")) /* line 88 */;
-		echo '">';
+ <a href="';
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[1]->locale , 'urlseo' => $articles[1]->urlseo])) /* line 98 */;
+		echo '"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text12"));
 		echo ' </a>
 
@@ -227,19 +324,19 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 
 	<div class="text">
 <a name="reference"></a>
-<h2>';
+<h2> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.head"));
-		echo '</h2>
+		echo ' </h2>
 
 
 <ul>
 <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text"));
-		echo '<a href="https://dobra-miska.cz/" target="_blank">dobra-miska.cz</a>.</li>
-<li>';
+		echo ' <a href="https://dobra-miska.cz/" target="_blank">dobra-miska.cz</a>.</li>
+<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text1"));
 		echo ' <a href="http://slunecno.cz/" target="_blank">slunecno.cz</a>.</li>
-<li>';
+<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text2"));
 		echo ' <a href="https://www.swklid.cz/" target="_blank">SW KLID</a>. </li>
 <li> ';
@@ -250,33 +347,33 @@ final class Templateecbb55184e extends Latte\Runtime\Template
         <img src="/images/josef-jebavy-linux-admin-small.jpg" alt="josef jebavy linux admin" border="1"></a>
 </div>
 </li>
-    	<li>';
+    	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text4"));
 		echo '  <a href="https://blog.josefjebavy.cz/unix/yocto-project-jak-si-priravit-linuxovy-system-pro-embedded-zarizeni" target="_blank">';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text4.1"));
 		echo ' </a>.</li>
-    	<li>';
+    	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text5"));
-		echo '</li>
-<li>';
+		echo ' </li>
+<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text6"));
 		echo '
 <a href="https://www.google.com/search?q=9300-ENA+router&tbm=isch" target="_blank">9300-ENA - ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text7"));
-		echo '</a>.</li>
-	<li><a href="https://blog.josefjebavy.cz/warduino" target="_blank">';
+		echo ' </a>.</li>
+	<li><a href="https://blog.josefjebavy.cz/warduino" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text8"));
-		echo '</a>.
+		echo ' </a>.
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text9"));
 		echo '
 <a href="http://www.aradio.cz" target="_blank">PE-AR</a>.</li>
-	<li><a href="https://wireless.xeres.cz/" target="_blank">';
+	<li><a href="https://wireless.xeres.cz/" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text10"));
-		echo '</a>.</li>
-	<li><a href="https://wrttm.xeres.cz/" target="_blank">';
+		echo ' </a>.</li>
+	<li><a href="https://wrttm.xeres.cz/" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text11"));
-		echo '</a>
+		echo ' </a>
 	<br>
 	        <div>
         <a href="/images/wireless-real-time-temperature-measurement.png"   title="';
@@ -290,47 +387,47 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 	<li>Wireless Real Time Temperature measurement for Android.</li>
 	<li><a href="https://ebook.josefjebavy.cz/ebook/pripojeni-iqrf-k-androidu/" title="';
 		echo LR\Filters::escapeHtmlAttr(call_user_func($this->filters->translate, "referencie.text12"));
-		echo ' " target="_blank">';
+		echo ' " target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text12"));
-		echo '</a></li>
-	<li>';
-		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text13"));
-		echo ' <a href="https://blog.josefjebavy.cz/programovani/eshop-prestashop" target="_blank">';
-		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text13.1"));
-		echo '</a>, ';
-		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text13.2"));
-		echo '</li>
-	<li>';
-		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text14"));
-		echo '</li>
-	<li><a href="http://www.pocasi-frydlant.cz/webcams.php" target="_blank">';
-		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text15"));
 		echo ' </a></li>
 	<li>';
+		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text13"));
+		echo ' <a href="https://blog.josefjebavy.cz/programovani/eshop-prestashop" target="_blank"> ';
+		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text13.1"));
+		echo ' </a>, ';
+		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text13.2"));
+		echo ' </li>
+	<li> ';
+		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text14"));
+		echo ' </li>
+	<li><a href="http://www.pocasi-frydlant.cz/webcams.php" target="_blank"> ';
+		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text15"));
+		echo ' </a></li>
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text16"));
-		echo '</li>
+		echo ' </li>
 
-    	<li>';
+    	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text17"));
-		echo '</li>
-	<li>';
+		echo ' </li>
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text18"));
 		echo ' </li>
-	<li><a href="https://wirelessbee.xeres.cz" target="_blank">';
+	<li><a href="https://wirelessbee.xeres.cz" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text19"));
-		echo '</a></li>
-	<li><a href="https://blog.josefjebavy.cz/programovani/spojegui" target="_blank">';
+		echo ' </a></li>
+	<li><a href="https://blog.josefjebavy.cz/programovani/spojegui" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text20"));
-		echo '</a></li>
-	<li><a href="https://maps.xeres.cz/" target="_blank">';
+		echo ' </a></li>
+	<li><a href="https://maps.xeres.cz/" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text21"));
-		echo '</a></li>
-	<li><a href="https://blog.josefjebavy.cz/programovani/javacard">';
+		echo ' </a></li>
+	<li><a href="https://blog.josefjebavy.cz/programovani/javacard"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text22"));
-		echo '</a>.</li>
-	<li><a href="https://blog.josefjebavy.cz/programovani/UPSmonitor.pdf" target="_blank">';
+		echo ' </a>.</li>
+	<li><a href="https://blog.josefjebavy.cz/programovani/UPSmonitor.pdf" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "referencie.text23"));
-		echo '</a></li>
+		echo ' </a></li>
 
 </ul>
 
@@ -340,24 +437,19 @@ final class Templateecbb55184e extends Latte\Runtime\Template
     <a name="doporuceni"></a>
 
 
-    <h2>';
+    <h2> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.head"));
-		echo '</h2>
-    <h3>';
+		echo ' </h2>
+    <h3> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.head"));
-		echo '</h3>
+		echo ' </h3>
 
-    <a id="doporuceni1BT" onclick="showDoporuceni(1)">';
+    <a id="doporuceni1BT" onclick="showDoporuceni(1)"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.text"));
-		echo '</a>
-
-
-
+		echo ' </a>
 ';
-		$this->createTemplate("navolnenoze-rss.latte", $this->params, 'include')->renderToContentType('html') /* line 155 */;
+		$this->createTemplate("navolnenoze-rss.latte", $this->params, 'include')->renderToContentType('html') /* line 162 */;
 		echo '
-
-
     <h3>LinkedIn</h3>
 
     <a id="doporuceni2BT" onclick="showDoporuceni(2)">  ';
@@ -366,7 +458,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 
 
     <div id="doporuceni2" class="text" style="display: none">
-        <p>';
+        <p> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.text2"));
 		echo ' <a href="https://www.linkedin.com/in/josef-jebavy"
                                          target="_blank">linkedin.com</a>
@@ -374,14 +466,14 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 
         <div class="about">
             <h3><a href="https://www.linkedin.com/in/petrberny/">Petr Berný</a></h3>
-            <p>';
+            <p> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.LinkedIn"));
-		echo '</p>
+		echo ' </p>
         </div>
 
         <div class="about">
             <h3><a href="https://www.linkedin.com/in/radek-hanek-999756154/">Radek Hanek</a></h3>
-            <p>';
+            <p> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.LinkedIn1"));
 		echo '
             </p>
@@ -390,14 +482,14 @@ final class Templateecbb55184e extends Latte\Runtime\Template
     </div>
 
 
-    <h3>';
+    <h3> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.head3"));
-		echo '</h3>
+		echo ' </h3>
 
 <p>
-    <a href="https://webtrh.cz/members/53014/rating" target="_blank">';
+    <a href="https://webtrh.cz/members/53014/rating" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.text3"));
-		echo '</a>.
+		echo ' </a>.
 </p>
 </div>
 
@@ -405,12 +497,12 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 
   <a name="technologie"></a>
 
- <h2>';
+ <h2> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.head"));
-		echo '</h2>
- <p>';
+		echo ' </h2>
+ <p> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text"));
-		echo '</p>
+		echo ' </p>
 <ul>
 	<li>OS GNU/Linux</li>
 	<li>Ethernet, WiFi, TCP/IP.</li>
@@ -430,13 +522,13 @@ final class Templateecbb55184e extends Latte\Runtime\Template
     <a href="https://docs.packetery.com/03-creating-packets/06-packetery-api-reference.html">SOAP API Zásilkovna</a>,
      PPL myAPI, API Česká pošta, Geis API.
     </li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text3"));
 		echo ' (SVN, Git, GitLab).</li>
-    <li>';
+    <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text4"));
 		echo ' </li>
-    <li>';
+    <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text5"));
 		echo '</li>
     <li> ';
@@ -453,12 +545,12 @@ final class Templateecbb55184e extends Latte\Runtime\Template
         <a href="https://blog.josefjebavy.cz/programovani/ispconfig-hosting" target="_blank">ISP Config</a>, Ansible.
     </li>
     <li><a href="https://blog.josefjebavy.cz/unix/yocto-project-jak-si-priravit-linuxovy-system-pro-embedded-zarizeni" target="_blank">Yocto project</a>, Bitbake, embedded Linux.</li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text8"));
-		echo '</li>
-	<li>';
+		echo ' </li>
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text9"));
-		echo '</li>
+		echo ' </li>
 	<li>ARM single board PC: Raspberry Pi, Banana Pi R1.</li>
 </ul>
 
@@ -468,18 +560,18 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 
 <h2>Soft skills</h2>
 <ul>
-    <li>';
+    <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text10"));
-		echo '</li>
-     <li>';
+		echo ' </li>
+     <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text11"));
-		echo '</li>
-    <li>';
+		echo ' </li>
+    <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text12"));
-		echo '</li>
-    <li>';
+		echo ' </li>
+    <li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text13"));
-		echo '</li>
+		echo ' </li>
 </ul>
 
 </div>
@@ -491,46 +583,48 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 	<div class="text">
 
   <a name="publications"></a>
- <h2>Odborné publikace</h2>
+ <h2> ';
+		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.head2"));
+		echo '</h2>
 <ul>
 
-    <li><a href="https://www.root.cz/serialy/souborovy-system-btrfs/" target="_blank">';
+    <li><a href="https://www.root.cz/serialy/souborovy-system-btrfs/" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text14"));
-		echo '</a> (Root.cz 2020)</li>
-	<li><a href="https://blog.josefjebavy.cz/programovani/wireless-arduino-low-power-consumption" target="_blank">';
+		echo ' </a> (Root.cz 2020)</li>
+	<li><a href="https://blog.josefjebavy.cz/programovani/wireless-arduino-low-power-consumption" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text15"));
-		echo '</a> ';
+		echo ' </a> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text15.1"));
 		echo ' Amatérské Radio  2017/02)</li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text16"));
 		echo ' <a href="https://www.root.cz/serialy/bezdratovy-modul-warduxere/" target="_blank">';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text16.1"));
 		echo '</a> (www.root.cz 2016)</li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text17"));
 		echo ' <a href="https://www.root.cz/serialy/banana-pi-r1/" target="_blank">';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text17.1"));
 		echo '</a> (www.root.cz 2015)</li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text18"));
 		echo '<a href="http://www.rcmodely.cz/archiv/2014/4/9/"  target="_blank">';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text18.1"));
 		echo ' </a>)</li>
-	<li><a href=" https://blog.josefjebavy.cz/elektronika/usb-redukce#verze2release" target="_blank">';
+	<li><a href=" https://blog.josefjebavy.cz/elektronika/usb-redukce#verze2release" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text19"));
-		echo '</a>';
+		echo ' </a> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text19.1"));
 		echo ' </li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text20"));
-		echo '</li>
-	<li>';
+		echo ' </li>
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text21"));
-		echo '</li>
-	<li>';
+		echo ' </li>
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-technologie.text22"));
-		echo '<a href="https://wirelessbee.xeres.cz/cs/napsali-o-nas" target="_blank">Včelařství 2010/09</a>)</li>
+		echo ' <a href="https://wirelessbee.xeres.cz/cs/napsali-o-nas" target="_blank">Včelařství 2010/09</a>)</li>
 </ul>
 
 
@@ -541,47 +635,47 @@ final class Templateecbb55184e extends Latte\Runtime\Template
  	<div class="text">
 
   <a name="konference"></a>
- <h2>';
+ <h2> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.head"));
-		echo '</h2>
+		echo ' </h2>
  ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text"));
 		echo '
 <ul>
-    <li><a href="https://www.youtube.com/watch?v=TjuFBk7Tcgk" target="_blank">';
+    <li><a href="https://www.youtube.com/watch?v=TjuFBk7Tcgk" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text1"));
-		echo '</a> ';
+		echo ' </a> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text1.1"));
 		echo '  <a href="https://installfest.cz/if20/" target="_blank">InstallFest 2020</a></li>
-    <li><a href="https://youtu.be/GZW2Jm50lhQ" target="_blank">';
+    <li><a href="https://youtu.be/GZW2Jm50lhQ" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text2"));
 		echo '</a> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text2.1"));
 		echo ' <a href="https://opencamp.sk/" target="_blank">OpenCamp Bratislava</a> 2019</li>
-<li> Workshop <b><a href="https://www.youtube.com/watch?v=xnVWX7RFY0o" target="_blank">';
+<li> Workshop <b><a href="https://www.youtube.com/watch?v=xnVWX7RFY0o" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text3"));
-		echo '</a></b>';
+		echo ' </a></b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text3.1"));
 		echo '
 <a href="https://installfest.cz/if19/" target="_blank">InstallFest 2019</a>.
 </li>
 	<li>';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text4"));
-		echo ' <a href="https://www.youtube.com/watch?v=30QVNoK4bJg" 	target="_blank">';
+		echo ' <a href="https://www.youtube.com/watch?v=30QVNoK4bJg" 	target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text4.1"));
 		echo ' </a>
 	';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text4.2"));
 		echo '  <a href="https://openalt.cz/2018/">OpenAlt 2018</a></li>
-	<li><a href="https://blog.josefjebavy.cz/vzdelavani/konference-openalt_2017" 	target="_blank">';
+	<li><a href="https://blog.josefjebavy.cz/vzdelavani/konference-openalt_2017" 	target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text5"));
-		echo '</a></li>
+		echo ' </a></li>
 	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text5.1"));
 		echo '
-<a href="https://openalt.cz/2015/cs/home.html" target="_blank">';
+<a href="https://openalt.cz/2015/cs/home.html" target="_blank"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text6"));
-		echo '</a> ';
+		echo ' </a> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text6.1"));
 		echo '
 <a href="https://www.superlectures.com/openalt2015/banana-pi-r1"	target="_blank"> ';
@@ -589,10 +683,10 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo ' </a>
 
 </li>
-	<li>';
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text8"));
-		echo '</li>
-	<li>';
+		echo ' </li>
+	<li> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text9"));
 		echo ' </li>
 </ul>
@@ -610,25 +704,25 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo ' </li>
 	<li>';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text11"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text11.1"));
-		echo '</b>';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text11.2"));
 		echo '</li>
 	<li>';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text12"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text12.1"));
-		echo '</b>';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text12.2"));
 		echo ' </li>
 	<li>';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text13"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text13.1"));
-		echo '</b>';
+		echo ' </b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text13.2"));
-		echo ' <b>';
+		echo ' <b> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text13.3"));
 		echo ' </b>.</li>
 		<li>';
@@ -643,7 +737,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
  	<div class="text">
  <h2>';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.head3"));
-		echo '</h2>
+		echo ' </h2>
 <p>
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text15"));
@@ -659,9 +753,9 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 <p>
 ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text16"));
-		echo '<a href="https://geeklab.cz/">Geeklab</a>';
+		echo ' <a href="https://geeklab.cz/">Geeklab</a> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-konference.text17"));
-		echo '<a href="https://openalt.cz">OpenAlt</a>.
+		echo ' <a href="https://openalt.cz">OpenAlt</a>.
 
 </p>
 
@@ -729,7 +823,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo ' </h2>
 <p>
 ';
-		$this->createTemplate("soc-site.latte", $this->params, 'include')->renderToContentType('html') /* line 361 */;
+		$this->createTemplate("soc-site.latte", $this->params, 'include')->renderToContentType('html') /* line 366 */;
 		echo '</p>
 
 </div>

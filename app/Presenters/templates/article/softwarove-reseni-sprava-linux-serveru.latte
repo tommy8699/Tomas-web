@@ -1,0 +1,73 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+{block content}
+
+<div class="text">
+    <h1>Instalace hotových softwarových řešení a správa serverů</h1>
+
+    <p>
+        Řadu potřeb mají firmy společné.
+        Jedná se hlavně o <b>software každodenního použití</b>, který už uživatelé považují za samozřejmý
+        a bez něhož by se žádná firma neobešla.
+        V podstatě vždycky se jedná o software již existující a často i masově nabízený.
+        Ale i tímto softwarem se dá  zefektivnit práce, počínaje výběrem vhodného softwaru a konfigurací na míru potřebám uživatelů.
+
+    </p>
+
+    <div>
+        <a href="/images/servery.jpg"   title="josef jebavy servery" class="thickbox">
+            <img src="/images/servery-small.jpg" alt="josef jebavy servery" border="1"/></a>
+    </div>
+    <p>
+
+    <ul>
+
+        <li>Elektronicka pošta - mail servery.</li>
+        <li>Webové servery.</li>
+        <li>Okamžitá komunikace - chat, telefonování přes Internet (VoIP).</li>
+        <li>Systém pro správu obsahu / redakční systém / CMS.</li>
+        <li>Elektronický obchod - <a href="https://blog.josefjebavy.cz/programovani/eshop-prestashop" target="_blank"
+                                     title="eshop namíru">eshop Prestashop</a>.</li>
+        <li>Systém pro sledování návštěvnosti.</li>
+        <li>Sdílení dat - síťová úložiště.</li>
+        <li>Vlastní server jako web/mail hosting: <a href="https://blog.josefjebavy.cz/programovani/ispconfig-hosting" target="_blank">ISPConfig</a>.
+        </li>
+
+        <li>Nástroje pro vývoj a týmovou spolupráci např <a href="https://blog.josefjebavy.cz/unix/gitlab" target="_blank">Gitlab</a>.</li>
+
+        <li><a href="https://www.snapbackuper.com/" target="_blank">Zálohování</a> a obnova dat.</li>
+        <li>Zajištění <strong>dohledu běhu aplikací a serverů</strong>.
+            Nebo instalace dohledového software <a href="https://en.wikipedia.org/wiki/Icinga" target="_blank">Icinga</a> na vlastní
+            server.
+        </li>
+
+        <li>Instalace Linuxu na desktopy, servery a embedded počítače.</li>
+        <li>Správa linuxových serverů.</li>
+        <li>Vizualizační nástroj: <a href="https://blog.josefjebavy.cz/unix/virtualizace-proxmox" target="_blank">Proxmox</a>,
+            <a href="https://blog.josefjebavy.cz/unix/docker" target="_blank">Docker</a>.</li>
+
+    </ul>
+    </p>
+
+    <p>
+        Po zprovoznění serverových aplikací je potřeba server  a aplikaci spravovat,
+        <a href="https://www.linuxserveradmin.eu/linux-sprava-serveru" target="_blank">správu linuxových serverů</a> zajišťuji.
+    </p>
+
+    <p>
+        Nejčastější potřebou jsou programy pro univerzální a systematické sdílení dat.
+        <br />Opomíjenou záležitostí je zálohovaní.
+
+    </p>
+
+</div>

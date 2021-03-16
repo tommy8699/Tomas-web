@@ -1,0 +1,96 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+{block content}
+
+
+<div class="text">
+    <h1> {_skoleniBtrfs.head}</h1>
+
+</div>
+
+<div class="text about">
+    <a name="btrfs"></a>
+
+    <p>
+        {_skoleniBtrfs.text} <a href="{link Article:default, locale => $articl[5]-> locale , urlseo => $articl[5]-> urlseo }">{_skoleniBtrfs.text0.1}</a> {_skoleniBtrfs.text0.2}<a href="https://www.linuxserveradmin.eu/linux-server-zalohovani"  target="_blank">{_skoleniBtrfs.text0.3}</a>.
+    </p>
+
+
+    <p>
+        <strong>{_skoleniBtrfs.text1}</strong>
+    </p>
+
+    <p>
+        <img src="/img/Btrfs_logo.png" width="250" height="170" alt="">
+    </p>
+
+    <h2>{_skoleniBtrfs.text2}</h2>
+    <p>
+        Na <a href="{link Article:default, locale => $articl[5]-> locale , urlseo => $articl[5]-> urlseo }">{_skoleniBtrfs.text3}</a> {_skoleniBtrfs.text3.1}
+    </p>
+    <h3>{_skoleniBtrfs.text4}</h3>
+    <p>
+
+    <ul>
+        <li>{_skoleniBtrfs.text5}
+            <ul>
+                <li>{_skoleniBtrfs.text6}</li>
+                <li>{_skoleniBtrfs.text7}</li>
+
+            </ul>
+        </li>
+        <li><a href="https://blog.josefjebavy.cz/unix/filesystem-btrfs"  target="_blank">{_skoleniBtrfs.text8}</a></li>
+
+        <li>
+            {_skoleniBtrfs.text9}
+            <ul>
+                <li>{_skoleniBtrfs.text10}</li>
+                <li>{_skoleniBtrfs.text11}</li>
+                <li>{_skoleniBtrfs.text12}</li>
+                <li>{_skoleniBtrfs.text13}</li>
+                <li>{_skoleniBtrfs.text14}</li>
+                <li>{_skoleniBtrfs.text15}</li>
+            </ul>
+        </li>
+        <li>
+            {_skoleniBtrfs.text16}
+            <ul>
+                <li>Fstab</li>
+                <li><a href="https://en.wikipedia.org/wiki/GNU_GRUB"  target="_blank">Grub</a></li>
+                <li><a href="https://cs.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface"  target="_blank">UEFI</a></li>
+            </ul>
+        </li>
+        <li>
+            {_skoleniBtrfs.text17}
+            <ul>
+                <li>Create snapshot</li>
+                <li>Delete</li>
+                <li>Send/receive</li>
+            </ul>
+        </li>
+    </ul>
+    </p>
+    <h2>{_skoleniBtrfs.text18} </h2>
+    {_skoleniBtrfs.text19}
+
+
+    <h2>{_skoleniBtrfs.text20}</h2>
+    <p>{_skoleniBtrfs.text21} <a href="https://www.virtualbox.org/"  target="_blank">VirtualBox</a>.</p>
+
+    <h2>{_skoleniBtrfs.text22}</h2>
+    <p>{_skoleniBtrfs.text23} <a href="https://www.linuxserveradmin.eu/"  target="_blank">{_skoleniBtrfs.text24}</a> {_skoleniBtrfs.text25}</p>
+
+    <p>
+        <a href="mailto:&#101;&#109;&#97;&#105;&#108;&#64;&#106;&#111;&#115;&#101;&#102;&#106;&#101;&#98;&#97;&#118;&#121;&#46;&#99;&#122;?subject=Zajímá mě školení BTRFS">{_skoleniBtrfs.text26}</a>
+    </p>
+</div>

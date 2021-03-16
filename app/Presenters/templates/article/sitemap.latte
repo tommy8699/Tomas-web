@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    {foreach $langs as $lang}
+
+        <url>
+            <loc>{link Homepage:default $lang }</loc>
+            <changefreq>weekly</changefreq>
+            <priority>1.0</priority>
+        </url>
+    {/foreach }
+
+    {for $i = 2; $i < 39; $i++}
+        <url>
+            <loc>{link Article:default urlseo => $articles[$i]-> urlseo, locale => $articles[$i]-> locale}</loc>
+
+            <changefreq>weekly</changefreq>
+
+            <priority>0.8</priority>
+
+        </url>
+    {/for}
+
+</urlset>

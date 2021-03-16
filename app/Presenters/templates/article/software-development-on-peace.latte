@@ -1,0 +1,44 @@
+{block meta}
+
+    {block description} <meta name="description" content="{$articles[0]->description}"> {/block}
+    {block keywords} <meta name="keywords" content="{$articles[0]->keywords}">  {/block}
+    {block title} <title> {$articles[0]->title} </title> {/block}
+    {block url}  <meta property="og:url" content="{$articles[0]->urlseo} " /> {/block}
+    {block type}<meta property="og:type" content="website" /> {/block}
+    {block titleshort} <meta property="og:titleshort" content="{$articles[0]->titleshort} " /> {/block}
+    {block ogimage}  <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" /> {/block}
+
+{/block}
+
+{block content}
+
+<div class="text">
+    <h1>Software development</h1>
+
+    <p>
+        Software development not only programs but also performs many other activities:
+    <ol>
+        <li>Collection of software / equipment requirements, analysis, concept creation and detailed assignment.</li>
+        <li>Ověření, zda neexistuje podobné hotové řešení, které by bylo možné použít nebo přizpůsobit pro řešení vašich potřeb, což může znamenat různé finance a čas.</li>
+        <li>Software architecture design.</li>
+        <li>Software development.</li>
+        <li>Software testing.</li>
+        <li>Choosing the right computer or hosting. Application deployment.</li>
+        <li>Remote application management.</li>
+        <li><a href="{link Article:default, locale => $articl[16]-> locale , urlseo => $articl[16]-> urlseo }">Development of embeded devices</a></li>
+        <li>Further development of the application.</li>
+    </ol>
+    </p>
+
+    <p>
+        I have experience with the development of applications for desktops, servers,<a href="https://multi.xeres.cz/unix/raspberry_pi" target="_blank">embedded HW</a>,
+        tablets / mobile phones with Android and web application development.
+        In today's information world, interconnection of systems such as e-shops and accounting is required.
+    </p>
+
+    <p>
+        I am able to <strong>take over the development of an existing project</strong> and further develop it.
+        When editing an existing program, it is necessary <a href="{link Article:default, locale => $articl[1]-> locale , urlseo => $articl[1]-> urlseo }">start cooperation after
+            steps</a>.
+    </p>
+</div>
