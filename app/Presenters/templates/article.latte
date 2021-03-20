@@ -1,1 +1,11 @@
+{block meta}
+
+     <meta name="description" content="{$articles[0]->description}">
+     <meta name="keywords" content="{$articles[0]->keywords}">
+     <title> {$articles[0]->title} </title>
+     <meta property="og:url" content="{$articles[0]->urlseo} " />
+     <meta property="og:type" content="website" />
+     <meta property="og:titleshort" content="{$articles[0]->titleshort} " />
+     <meta property="og:image" content="https://www.josefjebavy.cz/{$articles[0]->ogimage}" />
+{/block}
 {block content}
