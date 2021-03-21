@@ -45,23 +45,9 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->template->lang = $locale;
         $articles = $this->database->table('articles')->where(['locale'=> $locale])->fetchAll();
         $this->template->articles = $articles;
-      //  bdump($articles);
+        bdump($articles);
     }
 
-
-    public function renderSitemap(): void
-    {
-        $articles = $this->database->table('articles')->fetchAll();
-
-        //pouziji jako hlavni sablonu prazdnou sablonu
-        $this->setLayout('empty');
-        // zajisti genrovani ablolutnich URL
-        $this->absoluteUrls = true;
-        $this->template->articles = $articles;
-        $this->template->langs=$this->langs;
-        $this->getHttpResponse()->setContentType('application/xml');
-
-    }
     /** @var Forms\commentFormFactory */
     private Forms\commentFormFactory $commentFormFactory;
 

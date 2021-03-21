@@ -5,7 +5,6 @@
     <link href="/css/body.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="/favicon.ico">
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
       <meta name="author" content="Bc. Josef Jebavý" >
       <meta name="generator" content="Bluefish 2.2.10" >
   <meta name="google-site-verification" content="MbeXvsACTdKE7lC10_buc1k0RvfxpVWgl2EoDn--dPo" >
@@ -14,7 +13,16 @@
 <script type="text/javascript" src="/js/functions.js"></script>
 <link rel="stylesheet" href="/css/thickbox.css" type="text/css" media="screen" >
       <!-- Tu si vkladam meta tagy -->
-      {include block meta}
+
+      <meta name="description" content="{ifset description}{include block description}{else}{$articles[0]->description}{/ifset}">
+      <meta name="keywords" content="{ifset keywords}{include block keywords}{else}{$articles[0]->keywords}{/ifset}">
+      <title>{ifset title}{include block title}{else}{$articles[0]->title}{/ifset}  </title>
+      <meta property="og:url" content="{ifset urlseo}{include block urlseo}{else}{$articles[0]->urlseo}{/ifset} " />
+      <meta property="og:type" content="website" />
+      <meta property="og:titleshort" content="{ifset titleshort}{include block titleshort}{else}{$articles[0]->titleshort}{/ifset} " />
+      <meta property="og:image" content="https://www.josefjebavy.cz/{ifset ogimage}{include block ogimage}{else}{$articles[0]->ogimage}{/ifset}" />
+
+
      <meta property="og:locality" content="Jilemnice" />
      <meta property="og:postal-code" content="5140 01" />
      <meta property="og:country-name" content="Česká republika" />
@@ -40,8 +48,7 @@
   </head>
   <body>
   <div id="main">
-    <a href="#">
-
+      <a href="{link Homepage:default, locale => $articles[0]-> locale }">
      <div id="header">
           <div id="header-name">
                 Josef Jebavý<br>
