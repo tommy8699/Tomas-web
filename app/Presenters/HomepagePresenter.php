@@ -19,8 +19,6 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
     public $langs = ['cs', 'en'];
 
 
-
-
     /** @var Context @inject */
     public $database;
     
@@ -31,7 +29,6 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
 
         $httpRequest = $this->getHttpRequest();
         $locale = $httpRequest->detectLanguage($this->langs);
-        // bdump($locale);
         if (is_null($locale)) {
             $locale = "cs";
         }
@@ -45,7 +42,6 @@ final class HomepagePresenter extends Nette\Application\UI\Presenter
         $this->template->lang = $locale;
         $articles = $this->database->table('articles')->where(['locale'=> $locale])->fetchAll();
         $this->template->articles = $articles;
-        bdump($articles);
     }
 
     /** @var Forms\commentFormFactory */

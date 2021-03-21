@@ -8,16 +8,11 @@
       <meta name="author" content="Bc. Josef Jebavý" >
       <meta name="generator" content="Bluefish 2.2.10" >
   <meta name="google-site-verification" content="MbeXvsACTdKE7lC10_buc1k0RvfxpVWgl2EoDn--dPo" >
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript" src="/js/thickbox.js"></script>
-<script type="text/javascript" src="/js/functions.js"></script>
-<link rel="stylesheet" href="/css/thickbox.css" type="text/css" media="screen" >
-      <!-- Tu si vkladam meta tagy -->
-
-      <meta name="description" content="{ifset description}{include block description}{else}{$articles[0]->description}{/ifset}">
-      <meta name="keywords" content="{ifset keywords}{include block keywords}{else}{$articles[0]->keywords}{/ifset}">
-      <title>{ifset title}{include block title}{else}{$articles[0]->title}{/ifset}  </title>
-      <meta property="og:url" content="{ifset urlseo}{include block urlseo}{else}{$articles[0]->urlseo}{/ifset} " />
+      <link rel="stylesheet" href="{$basePath}/css/thickbox.css" type="text/css" media="screen" >
+      <meta name="description" content="{ifset description}{include description}{else}{$articles[0]->description}{/ifset}">
+      <meta name="keywords" content="{ifset keywords}{include keywords}{else}{$articles[0]->keywords}{/ifset}">
+      <title>{ifset title}{include title}{else}{$articles[0]->title}{/ifset}  </title>
+      <meta property="og:url" content="{ifset urlseo}{include urlseo}{else}{$articles[0]->urlseo}{/ifset} " />
       <meta property="og:type" content="website" />
       <meta property="og:titleshort" content="{ifset titleshort}{include block titleshort}{else}{$articles[0]->titleshort}{/ifset} " />
       <meta property="og:image" content="https://www.josefjebavy.cz/{ifset ogimage}{include block ogimage}{else}{$articles[0]->ogimage}{/ifset}" />
@@ -83,10 +78,12 @@
 	    <script src="https://nette.github.io/resources/js/3/netteForms.min.js"></script>
 
 	    <script type="text/javascript" src="//default.xeres.cz/js/awstats_misc_tracker.js"></script>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-                  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-                  crossorigin="anonymous"></script>
-        <script src="/js/form.js"></script>
+          <script type="text/javascript" src="{$basePath}/js/jquery.js"></script>
+
+          <script type="text/javascript" src="{$basePath}/js/thickbox.js"></script>
+          <script type="text/javascript" src="{$basePath}/js/functions.js"></script>
+        <script src="{$basePath}/js/form.js"></script>
+
       {/block}
     <noscript><img src="//default.xeres.cz/js/awstats_misc_tracker.js?nojs=y" height=0 width=0 border=0 style="display: none"></noscript>
 
