@@ -20,7 +20,7 @@ return array (
     'App\\Presenters\\ArticlePresenter' => 
     array (
       'file' => '/var/www/html/app/Presenters/ArticlePresenter.php',
-      'time' => 1615719531,
+      'time' => 1616354532,
     ),
     'App\\Presenters\\Error4xxPresenter' => 
     array (
@@ -35,12 +35,12 @@ return array (
     'App\\Presenters\\HomepagePresenter' => 
     array (
       'file' => '/var/www/html/app/Presenters/HomepagePresenter.php',
-      'time' => 1615721051,
+      'time' => 1616347216,
     ),
     'App\\Router\\RouterFactory' => 
     array (
       'file' => '/var/www/html/app/Router/RouterFactory.php',
-      'time' => 1615880546,
+      'time' => 1616345595,
     ),
   ),
   1 => 
@@ -48,6 +48,8 @@ return array (
     'Nette\\Application\\UI\\IStatePersistent' => 7,
     'Nette\\Application\\UI\\ITemplate' => 4,
     'Nette\\Application\\UI\\ITemplateFactory' => 1,
-    'Nette\\Localization\\Nette\\Localization\\ITranslator' => 3,
+    'Nette\\Localization\\Nette\\Localization\\ITranslator' => 6,
+    'Nette\\Security\\IResource' => 1,
+    'Nette\\Application\\UI\\ISignalReceiver' => 3,
   ),
 );

@@ -6,7 +6,7 @@ use Latte\Runtime as LR;
 final class Templateecbb55184e extends Latte\Runtime\Template
 {
 	protected const BLOCKS = [
-		['meta' => 'blockMeta', 'description' => 'blockDescription', 'keywords' => 'blockKeywords', 'title' => 'blockTitle', 'url' => 'blockUrl', 'type' => 'blockType', 'titleshort' => 'blockTitleshort', 'ogimage' => 'blockOgimage', 'content' => 'blockContent'],
+		['content' => 'blockContent'],
 	];
 
 
@@ -16,12 +16,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		if ($this->getParentName()) {
 			return get_defined_vars();
 		}
-		$this->renderBlock('meta', get_defined_vars()) /* line 1 */;
-		echo '
-
-
-';
-		$this->renderBlock('content', get_defined_vars()) /* line 14 */;
+		$this->renderBlock('content', get_defined_vars()) /* line 1 */;
 		return get_defined_vars();
 	}
 
@@ -34,105 +29,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 	}
 
 
-	/** {block meta} on line 1 */
-	public function blockMeta(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo "\n";
-		$this->renderBlock('description', get_defined_vars()) /* line 3 */;
-		echo "\n";
-		$this->renderBlock('keywords', get_defined_vars()) /* line 4 */;
-		echo "\n";
-		$this->renderBlock('title', get_defined_vars()) /* line 5 */;
-		echo "\n";
-		$this->renderBlock('url', get_defined_vars()) /* line 6 */;
-		echo "\n";
-		$this->renderBlock('type', get_defined_vars()) /* line 7 */;
-		echo "\n";
-		$this->renderBlock('titleshort', get_defined_vars()) /* line 8 */;
-		echo "\n";
-		$this->renderBlock('ogimage', get_defined_vars()) /* line 9 */;
-		echo '
-
-';
-	}
-
-
-	/** {block description} on line 3 */
-	public function blockDescription(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo ' <meta name="description" content="';
-		echo LR\Filters::escapeHtmlAttr($articles[1]->description) /* line 3 */;
-		echo '"> ';
-	}
-
-
-	/** {block keywords} on line 4 */
-	public function blockKeywords(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo ' <meta name="keywords" content="';
-		echo LR\Filters::escapeHtmlAttr($articles[1]->keywords) /* line 4 */;
-		echo '">  ';
-	}
-
-
-	/** {block title} on line 5 */
-	public function blockTitle(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo ' <title> ';
-		echo LR\Filters::escapeHtmlText($articles[1]->title) /* line 5 */;
-		echo ' </title> ';
-	}
-
-
-	/** {block url} on line 6 */
-	public function blockUrl(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo '  <meta property="og:url" content="';
-		echo LR\Filters::escapeHtmlAttr($articles[1]->urlseo) /* line 6 */;
-		echo ' "> ';
-	}
-
-
-	/** {block type} on line 7 */
-	public function blockType(array $ʟ_args): void
-	{
-		echo '<meta property="og:type" content="website"> ';
-	}
-
-
-	/** {block titleshort} on line 8 */
-	public function blockTitleshort(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo ' <meta property="og:titleshort" content="';
-		echo LR\Filters::escapeHtmlAttr($articles[1]->titleshort) /* line 8 */;
-		echo ' "> ';
-	}
-
-
-	/** {block ogimage} on line 9 */
-	public function blockOgimage(array $ʟ_args): void
-	{
-		extract($this->params);
-		extract($ʟ_args);
-		echo '  <meta property="og:image" content="https://www.josefjebavy.cz/';
-		echo LR\Filters::escapeHtmlAttr($articles[1]->ogimage) /* line 9 */;
-		echo '"> ';
-	}
-
-
-	/** {block content} on line 14 */
+	/** {block content} on line 1 */
 	public function blockContent(array $ʟ_args): void
 	{
 		extract($this->params);
@@ -215,25 +112,25 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo ' </h2>
 
    <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[17]->locale , 'urlseo' => $articles[17]->urlseo])) /* line 50 */;
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[17]->locale , 'urlseo' => $articles[17]->urlseo])) /* line 37 */;
 		echo '"> <div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu1"));
 		echo ' </div></a>
 
   <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[13]->locale, 'urlseo' => $articles[13]->urlseo])) /* line 52 */;
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[13]->locale, 'urlseo' => $articles[13]->urlseo])) /* line 39 */;
 		echo '"><div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu2"));
 		echo ' </div></a>
 
  <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[2]->locale , 'urlseo' => $articles[2]->urlseo])) /* line 54 */;
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[2]->locale , 'urlseo' => $articles[2]->urlseo])) /* line 41 */;
 		echo '"> <div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu3"));
 		echo ' </div></a>
 
   <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[5]->locale , 'urlseo' => $articles[5]->urlseo])) /* line 56 */;
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[5]->locale , 'urlseo' => $articles[5]->urlseo])) /* line 43 */;
 		echo '"><div class="menu-list"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "text-about.menu4"));
 		echo ' </div></a>
@@ -312,7 +209,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 <p>
 <!-- tento link je nefunkcny treba dorobit, nezabudnut !!! -->
  <a href="';
-		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[1]->locale , 'urlseo' => $articles[1]->urlseo])) /* line 98 */;
+		echo LR\Filters::escapeHtmlAttr($this->global->uiControl->link("Article:default", ['locale' => $articles[1]->locale , 'urlseo' => $articles[1]->urlseo])) /* line 85 */;
 		echo '"> ';
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-text.text12"));
 		echo ' </a>
@@ -448,7 +345,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo LR\Filters::escapeHtmlText(call_user_func($this->filters->translate, "home-doporuceni.text"));
 		echo ' </a>
 ';
-		$this->createTemplate("navolnenoze-rss.latte", $this->params, 'include')->renderToContentType('html') /* line 162 */;
+		$this->createTemplate("navolnenoze-rss.latte", $this->params, 'include')->renderToContentType('html') /* line 149 */;
 		echo '
     <h3>LinkedIn</h3>
 
@@ -823,7 +720,7 @@ final class Templateecbb55184e extends Latte\Runtime\Template
 		echo ' </h2>
 <p>
 ';
-		$this->createTemplate("soc-site.latte", $this->params, 'include')->renderToContentType('html') /* line 366 */;
+		$this->createTemplate("soc-site.latte", $this->params, 'include')->renderToContentType('html') /* line 353 */;
 		echo '</p>
 
 </div>
